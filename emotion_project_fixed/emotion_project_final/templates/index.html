@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emotion Based Recommendation System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2 class="title">🎭 Emotion-Based Telugu Content Recommendation</h2>
+
+<div class="container">
+
+  <!-- ================= LEFT SIDE ================= -->
+  <div class="left-side">
+
+    <!-- TOP: WEBCAM -->
+    <div class="camera-box">
+      <video id="video" autoplay muted playsinline></video>
+      <div id="status">Starting camera…</div>
+      <button id="recalibrate" type="button">Recalibrate neutral face</button>
+    </div>
+
+    <!-- BOTTOM: XAI -->
+    <div class="xai-box">
+      <h4>🧠 Explainable AI (XAI)</h4>
+      <p id="xai-text">
+        The system analyzes facial expressions across multiple frames and
+        confirms emotions only after repeated detection to ensure accuracy.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- ================= RIGHT SIDE ================= -->
+  <div class="right-side">
+
+    <h3>🎵 Telugu Emotion-Based Songs</h3>
+    <div id="songs" class="video-grid"></div>
+
+    <h3>🎤 Motivational / Emotional Speeches</h3>
+    <div id="speeches" class="video-grid"></div>
+
+    <h3>🎧 Spotify Playlists</h3>
+    <div id="spotify"></div>
+
+  </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
